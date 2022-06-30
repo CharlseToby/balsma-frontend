@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "wisteria";
+  src: url('./assets/fonts/Wisteria.ttf') format('ttf'),
+        url('./assets/fonts/Wisteria.otf') format('otf'),
+        url('./assets/fonts/Wisteria.woff') format('woff');
+}
+
+body {
+  margin: 0;
+  font-family: 'wisteria', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
