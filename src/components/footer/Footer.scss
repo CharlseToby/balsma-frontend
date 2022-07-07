@@ -1,6 +1,49 @@
-.footer{
+$w750px: 750px;
 
-  h2{
-    color: yellowgreen;
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@1&display=swap');
+
+@font-face {
+  font-family: "circular std";
+  src: url("../../assets/fonts/circular-std.ttf");
+}
+
+
+
+.footer{
+  height: 281px;
+  background-color: #192023;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+
+  &__content{
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+
+    &__logo{
+      text-transform: capitalize;
+      font-size: 22px;
+      margin-bottom: 12px;
+      font-style: italic;
+      font-family: 'ABeeZee', sans-serif;
+    }
+    &__text{
+      font-size: 13px;
+      font-family: 'circular std', sans-serif;
+    }
+  }
+
+  &__socials{
+    svg{
+      margin: 0 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: $w750px) {
+  .footer{
+    height: 170px;
   }
 }
