@@ -1,6 +1,130 @@
-.team{
+$primary-color: #133639;
+$secondary-color: #265156;
+$w900px: 900px;
+$w750px: 750px;
 
-  h2{
-    color: grey;
+
+.team{
+  background-color: #E9EEF1;
+  padding: 150px 86px 100px;
+
+  &__header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+
+    &__title{
+      color: $primary-color;
+      font-size: 6.2em;
+      line-height: 1.1em;
+      margin-bottom: .3em;
+      text-transform: capitalize;
+    }
+    hr {
+      width: 256px;
+      background-color: #000;
+    }
+    &__text{
+      font-size: 24px;
+      line-height: 1.3em;
+      color: $secondary-color;
+      margin-top: 2rem;
+      max-width: 477px;
+    }
+  }
+
+  .team__members{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    max-width: 1168px;
+
+    &__member{
+      max-width: 350px;
+      margin-bottom: 5rem;
+
+      &__name{
+        font-size: 24px;
+        line-height: 1.1rem;
+        margin-top: 1.2em;
+        margin-bottom: .5em;
+        color: $primary-color;
+        text-transform: capitalize;
+      }
+      &__position{
+        color: $secondary-color;
+        opacity: 0.5;
+        text-transform: uppercase;
+        margin-bottom: 1.2em;
+      }
+      &__details{
+        font-size: 18px;
+        line-height: 1.2em;
+        color: $secondary-color;
+        margin: 0 .27em 1.8em;
+      }
+      &__socials{
+        margin: 0 0 2rem;
+
+        svg{
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $w750px) {
+  .team{
+    padding: 46px 20px;
+
+    &__header{
+      margin-bottom: 50px;
+      &__title{
+        font-size: 45px;
+        color: #171C54;
+      }
+      &__text{
+        font-size: 24px;
+        color: #868AA7;
+      }
+      hr{
+        width: 101px;
+      }
+    }
+
+        .team__members {
+          max-width: 1168px;
+    
+          &__member {
+            &__image{
+              img{
+                border-radius: 50%;
+              }
+            }
+
+            &__name {
+              color: #171C54;
+            }
+    
+            &__position {
+              color: #171C54;
+            }
+    
+            &__details {
+              color: #171C54;
+            }
+    
+            &__socials {
+              margin: 0 0 2rem;
+    
+              svg {
+                margin: 0 10px;
+              }
+            }
+          }
+        }
   }
 }
