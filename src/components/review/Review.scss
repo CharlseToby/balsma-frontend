@@ -1,5 +1,99 @@
+$primary-color: #133639;
+$secondary-color: #265156;
+$w900px: 900px;
+$w750px: 750px;
+
 .review{
-  h2{
-    color: burlywood;
+  padding: 72px 0;
+  &__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 100px;
+  
+      &__title {
+        color: $primary-color;
+        font-size: 6.2em;
+        line-height: 1.1em;
+        margin-bottom: .3em;
+        text-transform: capitalize;
+      }
+  
+      &__text {
+        font-size: 24px;
+        line-height: 1.3em;
+        color: #868AA7;
+        max-width: 629px;
+        margin-bottom: 1.3em;
+      }
+      &__rating{
+        svg{
+          margin: 0 10px;
+        }
+      }
+    }
+
+  .carousel{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .carousel__container{
+      display: flex;
+      column-gap: 0;
+      transition: ease 1s;
+      // transform: translateX(-100%);
+
+
+      .carousel__item{
+        min-width: 100vw !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // margin-bottom: 2rem;
+        // margin-top: 2rem;
+        margin: 2rem auto;
+
+        .carousel__item__review{
+          max-width: 692px;
+          margin-bottom: 2rem;
+          color: #171C54;
+          font-size: 18px;
+          line-height: 1.5em;
+          letter-spacing: 1px;
+        }
+        .carousel__item__reviewer{
+          display: flex;
+          align-items: center;
+          column-gap: 20px;
+
+          .carousel__item__reviewer__about{
+            margin: 0 30px;
+            .reviewer-name{
+              text-transform: capitalize;
+              font-size: 18px;
+              color: #171C54;
+              margin-bottom: .3rem;
+            }
+            .reviewer-work{
+              color: rgba(23, 28, 84, 0.5);
+            }
+          }
+        }
+      }
+
+    }
+    .arrow-right{
+      position: absolute;
+      top: 30px;
+      right: 100px;
+      cursor: pointer;
+    }
+    .arrow-left{
+      position: absolute;
+      top: 30px;
+      left: 100px;
+      cursor: pointer;
+    }
   }
 }
