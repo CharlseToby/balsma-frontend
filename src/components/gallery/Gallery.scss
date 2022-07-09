@@ -1,5 +1,6 @@
 $primary-color: #133639;
 $secondary-color: #265156;
+$w1441px: 1441px;
 $w950px: 950px;
 $w750px: 750px;
 
@@ -52,6 +53,25 @@ $w750px: 750px;
     }
     .arrow-right, .arrow-left{
       display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: $w1441px) {
+  .gallery {
+    .carousel {
+      .carousel__container {
+        column-gap: 30px;
+        .carousel__item {
+          width: 522.41px;
+
+          img{
+            width: 522.41px;
+            height: 449.96px;
+          }
+        }
+
+      }
     }
   }
 }

@@ -100,13 +100,27 @@ $w1441px: 1441px;
 }
 
 @media only screen and (max-width: $w1440px) {
-  .carousel__item{
-    min-width: 100vw !important;
+  .review{
+    .carousel{
+      .carousel__container{
+        .carousel__item{
+          min-width: 100vw;
+        }
+
+      }
+    }
   }
 }
 @media only screen and (min-width: $w1441px) {
-  .carousel__item{
-    min-width: 1440px !important;
+  .review {
+    .carousel {
+      .carousel__container {
+        .carousel__item {
+          min-width: 1440px;
+        }
+
+      }
+    }
   }
 }
 
