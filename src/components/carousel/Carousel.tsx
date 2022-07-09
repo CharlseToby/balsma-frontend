@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { ReactComponent as ArrowRight } from '../../assets/images/arrow-right.svg'
 import { ReactComponent as ArrowLeft } from '../../assets/images/arrow-left.svg'
 
@@ -29,6 +29,9 @@ const Carousel = ({ slideCount, goRight=false, autoSlide = false, itemsArray }: 
   
   // console.log(countDivider);
 
+  const slideInterval:{current: NodeJS.Timer | null} = useRef(null);
+
+
   const nextSlide = () => {
     if(goRight){
       currentSlide < 0 ?
@@ -53,13 +56,39 @@ const Carousel = ({ slideCount, goRight=false, autoSlide = false, itemsArray }: 
     }
   }
 
+  const stopSlideTimer = () => {
+    if (slideInterval.current) {
+      clearInterval(slideInterval.current)
+    }
+  }
+
+  useEffect(() => {
+    if(autoSlide) {
+      startSlideTimer();
+
+      return () => stopSlideTimer();
+    }
+  }, [itemsArray]);
+
+  const startSlideTimer = () => {
+    stopSlideTimer();
+    slideInterval.current = setInterval(() => {
+      if(goRight) {
+        setCurrentSlide(currentSlide => currentSlide < 0 ? currentSlide + 1 : -(countDivider - 1));
+      } else {
+        setCurrentSlide(currentSlide => currentSlide < countDivider - 1 ? currentSlide + 1 : 0)
+      }
+    }, 3000);
+  }
+
+
   return (
     <section className="carousel">
       <div className="carousel__container" 
       style={{transform: `translateX(${
         goRight ? 
-          (currentSlide / slideCount) * 100 : 
-          -(currentSlide / slideCount) * 100}%)`}}>
+          ((currentSlide / (countDivider - 1)) * ((countDivider - 1) * 100)) : 
+          -((currentSlide / (countDivider - 1)) * ((countDivider - 1) * 100))}%)`}}>
         {itemsArray}
       </div>
       <figure className="arrow-right" onClick={nextSlide}>
