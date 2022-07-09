@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/balsma-frontend/static/css/main.dccacbfa.css",
-    "main.js": "/balsma-frontend/static/js/main.0412c1f3.js",
+    "main.css": "/balsma-frontend/static/css/main.246a6bb4.css",
+    "main.js": "/balsma-frontend/static/js/main.0e7b374f.js",
     "static/js/787.9de8159f.chunk.js": "/balsma-frontend/static/js/787.9de8159f.chunk.js",
     "static/media/header-bg.png": "/balsma-frontend/static/media/header-bg.ec59fab3083e7f093e29.png",
     "static/media/about-us.png": "/balsma-frontend/static/media/about-us.cb0aad01ec2326f88e6e.png",
@@ -36,12 +36,12 @@
     "index.html": "/balsma-frontend/index.html",
     "static/media/facebook.svg": "/balsma-frontend/static/media/facebook.3f0d81cb134056857e5566085dd76476.svg",
     "static/media/facebook-icon.svg": "/balsma-frontend/static/media/facebook-icon.c6349fc80cb7395d74202a81137b4742.svg",
-    "main.dccacbfa.css.map": "/balsma-frontend/static/css/main.dccacbfa.css.map",
-    "main.0412c1f3.js.map": "/balsma-frontend/static/js/main.0412c1f3.js.map",
+    "main.246a6bb4.css.map": "/balsma-frontend/static/css/main.246a6bb4.css.map",
+    "main.0e7b374f.js.map": "/balsma-frontend/static/js/main.0e7b374f.js.map",
     "787.9de8159f.chunk.js.map": "/balsma-frontend/static/js/787.9de8159f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dccacbfa.css",
-    "static/js/main.0412c1f3.js"
+    "static/css/main.246a6bb4.css",
+    "static/js/main.0e7b374f.js"
   ]
 }
