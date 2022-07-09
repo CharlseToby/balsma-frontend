@@ -13,21 +13,18 @@ const Carousel = ({ slideCount, goRight=false, autoSlide = false, itemsArray }: 
 
   const [ currentSlide, setCurrentSlide ] = useState(0);
   
+  // set a variable to hold number of times the carousel should slide
   let countDivider: number = 1;
-  console.log(goRight);
-  
-  
   ((itemsArray?.length % slideCount) == 0 ) ? 
   (countDivider = itemsArray.length / slideCount) : 
   (countDivider = Math.floor(itemsArray.length / slideCount) + 1); 
   
+  // check direction of the carousel slider
   useEffect(() => {
     goRight ? setCurrentSlide(-(countDivider -1)) : setCurrentSlide(0);
   }, [goRight])
 
-  console.log(currentSlide);
-  
-  // console.log(countDivider);
+
 
   const slideInterval:{current: NodeJS.Timer | null} = useRef(null);
 
@@ -62,6 +59,7 @@ const Carousel = ({ slideCount, goRight=false, autoSlide = false, itemsArray }: 
     }
   }
 
+  // handle auto slide
   useEffect(() => {
     if(autoSlide) {
       startSlideTimer();
