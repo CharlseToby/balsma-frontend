@@ -1,9 +1,10 @@
-$w800px: 800px;
+$w750px: 750px;
 $w400px: 400px;
 
 .header{
   height: 1069px;
   width: 100vw;
+  max-width: 1440px;
   padding: 3.2rem 5rem;
   background-image: url('../../assets/images/header-bg.png');
   background-repeat: no-repeat;
@@ -27,6 +28,8 @@ $w400px: 400px;
       display: flex;
       li{
         margin: 0 2rem;
+        display: flex;
+        column-gap: 3px;
       }
     }
 
@@ -55,7 +58,7 @@ $w400px: 400px;
   
 }
 
-@media only screen and (max-width: $w800px){
+@media only screen and (max-width: $w750px){
   .header{
     padding: 36px 34px !important;
     .header__navlinks{

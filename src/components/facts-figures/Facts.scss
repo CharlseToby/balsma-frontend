@@ -1,8 +1,9 @@
-$w800px: 800px;
+$w750px: 750px;
 
 
 .facts{
   padding: 100px 86px;
+  max-width: 1440px;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
@@ -62,7 +63,7 @@ $w800px: 800px;
   }
 }
 
-@media only screen and (max-width: $w800px) {
+@media only screen and (max-width: $w750px) {
   .facts{
     padding: 58px 30px;
 

@@ -9,6 +9,7 @@ $w750px: 750px;
   flex-direction: column;
   align-items: center;
   width: 100vw;
+  max-width: 1440px;
 
   .services__header{
     .services__header__title{

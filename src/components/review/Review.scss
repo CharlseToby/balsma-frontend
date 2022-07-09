@@ -2,6 +2,8 @@ $primary-color: #133639;
 $secondary-color: #265156;
 $w900px: 900px;
 $w750px: 750px;
+$w1440px: 1440px;
+$w1441px: 1441px;
 
 .review{
   padding: 72px 0;
@@ -46,7 +48,6 @@ $w750px: 750px;
 
 
       .carousel__item{
-        min-width: 100vw !important;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -95,6 +96,17 @@ $w750px: 750px;
       left: 100px;
       cursor: pointer;
     }
+  }
+}
+
+@media only screen and (max-width: $w1440px) {
+  .carousel__item{
+    min-width: 100vw !important;
+  }
+}
+@media only screen and (min-width: $w1441px) {
+  .carousel__item{
+    min-width: 1440px !important;
   }
 }
 
